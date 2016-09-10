@@ -12,14 +12,14 @@ Place the `kodi.py` file into your `/custom_components/notify/` folder
 notify:
   platform: kodi
   name: kodi
-  host: http://192.168.0.123
+  host: 192.168.0.123
   port: 8080
   username: USERNAME
   password: PASSWORD
 ```
 Configuration variables:
 - **host** (*Required*): The host name or address of the device that is running XBMC/Kodi
-- **port** (*Required*): The port number, *default 8080, port 3005 for Plex*
+- **port** (*optional*): The port number, *default 8080, port 3005 for Plex*
 - **name** (*Optional*): Name displayed in the frontend.
 - **username** (*Optional*): The XBMC/Kodi HTTP username.
 - **password** (*Optional*): The XBMC/Kodi HTTP password.
