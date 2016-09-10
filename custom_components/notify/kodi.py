@@ -16,10 +16,14 @@ import logging
 import urllib
 
 from homeassistant.components.notify import (ATTR_TITLE, ATTR_TITLE_DEFAULT,
+                                             ATTR_DATA,
                                              BaseNotificationService, DOMAIN)
 
 _LOGGER = logging.getLogger(__name__)
 REQUIREMENTS = ['jsonrpc-requests==0.3']
+
+ATTR_DISPLAYTIME = 'displaytime'
+ATTR_ICON = 'icon'
 
 
 def get_service(hass, config):
@@ -56,7 +60,18 @@ class KODINotificationService(BaseNotificationService):
     def send_message(self, message="", **kwargs):
         """Send a message to Kodi."""
         try:
+            data = kwargs.get(ATTR_DATA)
+            displaytime = 10000
+            icon = "info"
+
+            if data is not None and ATTR_DISPLAYTIME in data:
+                displaytime = data.get(ATTR_DISPLAYTIME, 10000)
+
+            if data is not None and ATTR_ICON in data:
+                icon = data.get(ATTR_ICON, "info")
+
             title = kwargs.get(ATTR_TITLE, ATTR_TITLE_DEFAULT)
-            self._server.GUI.ShowNotification(title, message, "info", 15000)
-        except:
-            _LOGGER.warning('Unable to fetch kodi data')
+            self._server.GUI.ShowNotification(title, message, icon,
+                                              displaytime)
+        except ErrorException as exception:
+            _LOGGER.warning('Unable to fetch kodi data, "%s"', exception)
