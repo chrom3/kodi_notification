@@ -15,7 +15,7 @@ notify:
 import logging
 import urllib
 
-from homeassistant.components.notify import (ATTR_TITLE,
+from homeassistant.components.notify import (ATTR_TITLE, ATTR_TITLE_DEFAULT,
                                              BaseNotificationService, DOMAIN)
 
 _LOGGER = logging.getLogger(__name__)
@@ -56,7 +56,7 @@ class KODINotificationService(BaseNotificationService):
     def send_message(self, message="", **kwargs):
         """Send a message to Kodi."""
         try:
-            title = kwargs.get(ATTR_TITLE)
+            title = kwargs.get(ATTR_TITLE, ATTR_TITLE_DEFAULT)
             self._server.GUI.ShowNotification(title, message, "info", 15000)
         except:
             _LOGGER.warning('Unable to fetch kodi data')
