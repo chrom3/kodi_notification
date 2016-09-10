@@ -43,6 +43,6 @@ kodi_notification:
 message variables:
 - **title** (*Optional*): Title that is displayed on the message.
 - **message** (*Required*): Message to be displayed.
-- **data** (*Optional*): Name displayed in the frontend.
+- **data** (*Optional*)
   - **icon** (*Optional*): Kodi comes with 3 default icons: "info", "warning" and "error", url to an image is also valid. *Defaults to "info"*
   - **displaytime** (*Optional*): Length in milliseconds the message stays on screen. *Defaults to 10000 ms*
