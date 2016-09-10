@@ -30,7 +30,7 @@ Configuration variables:
 ## Script / Notify KODI
 ################################################################
 
-kodi_test:
+kodi_notification:
   sequence:
   - service: notify.kodi
     data:
