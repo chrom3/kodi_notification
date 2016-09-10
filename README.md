@@ -1,4 +1,4 @@
-# kodi notification for Home Assistant
+#Kodi notification for Home Assistant
 
 Place the `kodi.py` file into your `/custom_components/notify/` folder
 
@@ -20,7 +20,7 @@ notify:
 ```
 Configuration variables:
 - **host** (*Required*): The host name or address of the device that is running XBMC/Kodi
-- **port** (*Required*): The port number, *default 8080*
+- **port** (*Required*): The port number, *default 8080, port 3005 for Plex*
 - **name** (*Optional*): Name displayed in the frontend.
 - **username** (*Optional*): The XBMC/Kodi HTTP username.
 - **password** (*Optional*): The XBMC/Kodi HTTP password.
@@ -45,4 +45,4 @@ message variables:
 - **message** (*Required*): Message to be displayed.
 - **data** (*Optional*): Name displayed in the frontend.
   - **icon** (*Optional*): Kodi comes with 3 default icons: "info", "warning" and "error", url to an image is also valid. *Defaults to "info"*
-  - **displaytime** (*Optional*): Length in milliseconds the message stays on screen. *Defaults to 10000s*
+  - **displaytime** (*Optional*): Length in milliseconds the message stays on screen. *Defaults to 10000 ms*
