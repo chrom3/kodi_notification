@@ -2,6 +2,8 @@
 
 Place the `kodi.py` file into your `/custom_components/notify/` folder
 
+![alt text](https://raw.githubusercontent.com/chrom3/kodi_notification/master/Notification%20Example.jpg "Logo Title Text 1")
+
 ##Usage Example##
 
 ###configuration.yaml example###
