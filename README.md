@@ -13,7 +13,7 @@ notify:
   host: http://192.168.0.123
   port: 8080
   name: Kodi
-  user: USERNAME
+  username: USERNAME
   password: PASSWORD
 ```
 Configuration variables:
