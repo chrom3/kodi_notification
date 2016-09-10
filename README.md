@@ -5,7 +5,7 @@ Place the `kodi.py` file into your `/custom_components/notify/` folder
 ##Usage Example##
 
 ###configuration.yaml example###
-```
+```yaml
 # Example configuration.yaml entry
 notify:
   platform: kodi
@@ -24,7 +24,7 @@ notify:
 
 
 ###script.yaml example###
-```
+```yaml
 ################################################################
 ## Script / Notify KODI
 ################################################################
