@@ -11,10 +11,9 @@ Place the `kodi.py` file into your `/custom_components/notify/` folder
 # Example configuration.yaml entry
 notify:
   platform: kodi
-  name: kodi_test
+  name: kodi
   host: http://192.168.0.123
   port: 8080
-  name: Kodi
   username: USERNAME
   password: PASSWORD
 ```
