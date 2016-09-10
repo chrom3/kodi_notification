@@ -10,11 +10,11 @@ Place the `kodi.py` file into your `/custom_components/notify/` folder
 notify:
   platform: kodi
   name: kodi_test
-  host: http://192.168.0.123    (Required)
-  port: 8080                    (Required)
-  name: Kodi                    (Optional)
-  user: USERNAME                (Optional)
-  password: PASSWORD            (Optional)
+  host: http://192.168.0.123
+  port: 8080
+  name: Kodi
+  user: USERNAME
+  password: PASSWORD
 ```
 - **host** (*Required*): The host name or address of the device that is running XBMC/Kodi
 - **port** (*Required*): The port number, *default 8080*
