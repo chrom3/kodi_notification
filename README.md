@@ -23,17 +23,24 @@ Configuration variables:
 - **username** (*Optional*): The XBMC/Kodi HTTP username.
 - **password** (*Optional*): The XBMC/Kodi HTTP password.
 
-
 ###script.yaml example###
 ```yaml
 ################################################################
 ## Script / Notify KODI
 ################################################################
-
 kodi_notification:
   sequence:
   - service: notify.kodi
     data:
       title: "Home Assistant"
       message: "Message to KODI from Home Assistant!"
+      data:
+        displaytime: 20000
+        icon: "warning"
 ```
+message variables:
+- **title** (*Optional*): Title that is displayed on the message.
+- **message** (*Required*): Message to be displayed.
+- **data** (*Optional*): Name displayed in the frontend.
+  - **icon** (*Optional*): Kodi comes with 3 default icons: "info", "warning" and "error", url to an image is also valid. *Defaults to "info"*
+  - **displaytime** (*Optional*): Length in milliseconds the message stays on screen. *Defaults to 10000s*
