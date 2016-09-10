@@ -16,6 +16,7 @@ notify:
   user: USERNAME
   password: PASSWORD
 ```
+Configuration variables:
 - **host** (*Required*): The host name or address of the device that is running XBMC/Kodi
 - **port** (*Required*): The port number, *default 8080*
 - **name** (*Optional*): Name displayed in the frontend.
