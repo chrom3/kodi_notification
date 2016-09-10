@@ -1,11 +1,10 @@
 # kodi notification for Home Assistant
 
 Place the `kodi.py` file into your `/custom_components/notify/` folder
----
 
-Usage Example
+##Usage Example##
 
-##configuration.yaml example##
+###configuration.yaml example###
 ```
 # Example configuration.yaml entry
 notify:
@@ -17,20 +16,14 @@ notify:
   user: USERNAME                (Optional)
   password: PASSWORD            (Optional)
 ```
-**host** (*Required*): The host name or address of the device that is running XBMC/Kodi
-
-**port** (*Required*): The port number, *default 8080*
-
-**name** (*Optional*): Name displayed in the frontend.
-
-**username** (*Optional*): The XBMC/Kodi HTTP username.
-
-**password** (*Optional*): The XBMC/Kodi HTTP password.
+- **host** (*Required*): The host name or address of the device that is running XBMC/Kodi
+- **port** (*Required*): The port number, *default 8080*
+- **name** (*Optional*): Name displayed in the frontend.
+- **username** (*Optional*): The XBMC/Kodi HTTP username.
+- **password** (*Optional*): The XBMC/Kodi HTTP password.
 
 
-
-
-##script.yaml example##
+###script.yaml example###
 ```
 ################################################################
 ## Script / Notify KODI
