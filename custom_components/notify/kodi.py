@@ -9,7 +9,7 @@ notify:
   host: http://192.168.0.123    (Required)
   port: 8080                    (Required)
   name: Kodi                    (Optional)
-  user: USERNAME                (Optional)
+  username: USERNAME            (Optional)
   password: PASSWORD            (Optional)
 """
 import logging
@@ -30,7 +30,7 @@ def get_service(hass, config):
     if jsonrpc_url:
         url = jsonrpc_url.rstrip('/jsonrpc')
 
-    auth = (config.get('user', ''),
+    auth = (config.get('username', ''),
             config.get('password', ''))
 
     return KODINotificationService(
